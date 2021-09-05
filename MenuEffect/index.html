@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -33,4 +34,41 @@
         });
     </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism | Magic Indicator 3</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Contact</a></li>
+        <div id="marker"></div>
+    </ul>
+
+    <script>
+        const marker = document.querySelector('#marker');
+        const item = document.querySelectorAll('ul li a');
+
+        function Indicator(e) {
+            marker.style.left = e.offsetLeft+'px';
+            marker.style.width = e.offsetWidth+'px';
+        }
+
+        item.forEach(link => {
+            link.addEventListener('mousemove', (e) => {
+                Indicator(e.target);
+            });
+        });
+    </script>
+</body>
+>>>>>>> a8eb8e1ce44de9c9c243bb945ce9c5a2a1a36edc
 </html>
